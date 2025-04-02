@@ -1,0 +1,37 @@
+[project]
+name = "parsersenpai"
+version = "0.1.0"
+description = "A powerful PDF parser for extracting structured data from GGGSIPU result PDFs"
+readme = "README.md"
+authors = [
+    {name = "martian0x80", email = "admin@ipusenpai.in"}
+]
+license = {text = "GPL-3.0-only"}
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pdfplumber>=0.11.5",
+    "pandas>=2.2.3",
+    "rich>=13.9.4"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/martian0x80/Parser-Senpai"
+"Bug Tracker" = "https://github.com/martian0x80/Parser-Senpai/issues"
+
+[project.scripts]
+parsersenpai = "ParserSenpai:main"
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
